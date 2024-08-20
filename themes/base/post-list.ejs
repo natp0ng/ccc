@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <style><%= customCSS %></style>
+</head>
+<body>
+  <h1>Base theme</h1>
+  <header><%- headerContent %></header>
+  <hr/>
+  <main>
+    <h1>All posts</h1>
+    <div><%- mainContent %></div>
+  </main>
+  <hr/>
+  <div>
+    <ul>
+      <% posts.forEach(function(post){ %>
+        <%- include('post/list-item', {post: post}); %>
+      <% }); %>
+    </ul>
+  </div>
+  <hr/>
+  <footer><%- footerContent %></footer>
+</body>
+</html>
